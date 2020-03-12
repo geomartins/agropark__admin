@@ -1,6 +1,6 @@
-# Green Asset (green_asset)
+# Green Asset 
 
-Agricultural Asset Investment App
+Enterprise Resource Planning 
 
 ## Install the dependencies
 ```bash
