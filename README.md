@@ -1,6 +1,6 @@
 # Green Asset 
 
-Enterprise Resource Planning 
+Agricultural Enterprise Resource Planning Software 
 
 ## Install the dependencies
 ```bash
@@ -18,5 +18,3 @@ quasar dev
 quasar build
 ```
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
