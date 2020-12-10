@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Platform } from 'quasar';
 
 const state = {};
 const getters = {};
@@ -116,16 +117,46 @@ const actions = {
 
 
   async registered_users_report({ commit }, value) {
-    try {
-      var response = await axios.post(
-        "https://www.agropark.com.ng/api/v1/admin/registered_users_report",
-        value
-      );
 
-      return await response;
-    } catch (error) {
-      return await error.response;
+    let x = this;
+    let url = "https://www.agropark.com.ng/statement_of_account_download/"+value.user_id;
+            
+    if(Platform.is.cordova){
+      // plugins.methods.showCircularProgressIndicator(true);
+      axios({
+          url: url,
+          method: "GET",
+          responseType: 'arraybuffer'
+      }).then(response => {
+          var blob = new Blob([response.data])
+          if (typeof cordova !== 'undefined') {
+            x.saveBlob2File("file.pdf", blob)
+          }
+          //plugins.methods.showCircularProgressIndicator(false);
+      });
+
+    }else{
+      //plugins.methods.showCircularProgressIndicator(true);
+      axios({
+          url: url,
+          method: "GET",
+          responseType: 'arraybuffer'
+      }).then(response => {
+          var fileURL = window.URL.createObjectURL(new Blob([response.data],{type: 'application/pdf'}));
+          var fileLink = document.createElement("a");
+          fileLink.href = fileURL;
+          fileLink.setAttribute("download", "file.pdf");
+          document.body.appendChild(fileLink);
+          fileLink.click();
+          plugins.methods.showCircularProgressIndicator(false);
+
+      });
+
     }
+
+
+
+      
   }
 };
 

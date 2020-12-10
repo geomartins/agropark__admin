@@ -3,7 +3,7 @@
 <q-header elevated class="bg-teal">
         <q-bar>
           <q-icon name="laptop_chromebook" />
-          <div>AgroPark</div>
+          <div>{{ this.$store.state.config.app_name }}</div>
 
           <q-space />
 

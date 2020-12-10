@@ -138,7 +138,7 @@ export default {
 
 
                     /** Redirects to dashboard */
-                    x.$router.push('/dashboard');
+                    x.$router.push('/registered_users');
                     
                   
                   }

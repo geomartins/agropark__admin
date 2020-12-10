@@ -419,23 +419,34 @@ export const pick ={
                     //     separator: true
                     // },
 
-                    {
-                        icon: 'fas fa-users',
-                        label: 'Registered Users',
-                        bgColor: 'info-box bg-b-blue',
-                        boxSize: 'col-xs-12 col-md-3',
-                        url: '/registered_users',
-                        separator: true
-                    },
+                    // {
+                    //     icon: 'fas fa-users',
+                    //     label: 'Registered Users',
+                    //     bgColor: 'info-box bg-b-blue',
+                    //     boxSize: 'col-xs-12 col-md-3',
+                    //     url: '/registered_users',
+                    //     separator: true
+                    // },
 
-                    {
-                        icon: 'fas fa-globe',
-                        label: 'Report',
-                        bgColor: 'info-box bg-b-pink',
-                        boxSize: 'col-xs-12 col-md-3',
-                        url: '/report',
-                        separator: true
-                    },
+                    // {
+                    //     icon: 'fas fa-globe',
+                    //     label: 'Food Park',
+                    //     bgColor: 'info-box bg-b-pink',
+                    //     boxSize: 'col-xs-12 col-md-3',
+                    //     url: '/food-park',
+                    //     separator: true
+                    // },
+
+
+
+                    // {
+                    //     icon: 'fas fa-globe',
+                    //     label: 'Report',
+                    //     bgColor: 'info-box bg-b-pink',
+                    //     boxSize: 'col-xs-12 col-md-3',
+                    //     url: '/report',
+                    //     separator: true
+                    // },
 
                     // {
                     //     icon: 'fas fa-globe',

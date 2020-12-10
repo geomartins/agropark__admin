@@ -4,6 +4,8 @@ import login from './login'
 import passwordreset from './passwordreset'
 import registeredusers from './registeredusers'
 import reports from './reports'
+import foodpark from './foodpark'
+import config from "./config"
 
 // import example from './module-example'
 
@@ -24,7 +26,9 @@ export default function (/* { ssrContext } */) {
       login,
       passwordreset,
       registeredusers,
-      reports
+      reports,
+      foodpark,
+      config
     },
 
 

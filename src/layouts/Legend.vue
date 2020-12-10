@@ -74,9 +74,7 @@
      >
         <q-scroll-area class="fit" style=" margin-top: 10px;">
 
-         
-
-          <q-list>
+          <!-- <q-list>
             <router-link to='/dashboard' class="text-weight-regular text-grey-10"  style='text-decoration: none' exact>
             <q-item clickable v-ripple>
               <q-item-section avatar>
@@ -88,7 +86,7 @@
             </q-item>
             </router-link>
            <q-separator  />
-          </q-list>
+          </q-list> -->
 
 
 

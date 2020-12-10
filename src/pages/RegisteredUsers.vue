@@ -52,11 +52,11 @@
                 </div>
 
                 <div class="items">
-                  <q-btn class="q-ma-sm text-green" label="CREATE" @click="triggerCreateUser()" />
+                  <q-btn class="q-ma-sm text-green" label="CREATE"  />
                 </div>
 
                 <div class="items">
-                  <router-link to='/report'>
+                  <router-link >
                        <q-btn class="q-ma-sm text-green" label="REPORT"/>
                   </router-link>
                 </div>
@@ -143,204 +143,7 @@
 
                       <q-item-section side>
                         <div class="row items-center">
-                          {{ user.created_at | dateToHumanReadableForm }}
-                        </div>
-                      </q-item-section>
-                    </template>
-
-                    <q-card>
-                      <q-card-section>
-                        <div class="row">
-                          <div class="col-md-6 col-xs-12">
-                            <q-list bordered class="q-mr-sm q-mb-sm q-ml-sm">
-                              <q-item>
-                                <q-item-section>
-                                  <q-item-label caption lines="2"
-                                    >Fullname</q-item-label
-                                  >
-                                  <q-item-label>
-                                    {{
-                                      (user.surname + " " + user.other_names)
-                                        | ucwords
-                                    }}
-                                  </q-item-label>
-                                </q-item-section>
-                              </q-item>
-                            </q-list>
-                          </div>
-
-                          <div class="col-md-6 col-xs-12">
-                            <q-list bordered class="q-mr-sm q-mb-sm q-ml-sm">
-                              <q-item>
-                                <q-item-section>
-                                  <q-item-label caption lines="2"
-                                    >Email</q-item-label
-                                  >
-                                  <q-item-label>
-                                    {{ user.email }}
-                                  </q-item-label>
-                                </q-item-section>
-                              </q-item>
-                            </q-list>
-                          </div>
-
-                          <div class="col-md-4 col-xs-12">
-                            <q-list bordered class="q-mr-sm q-mb-sm q-ml-sm">
-                              <q-item>
-                                <q-item-section>
-                                  <q-item-label caption lines="2"
-                                    >Telephone</q-item-label
-                                  >
-                                  <q-item-label>
-                                    {{ user.telephone }}
-                                  </q-item-label>
-                                </q-item-section>
-                              </q-item>
-                            </q-list>
-                          </div>
-
-                          <div class="col-md-4 col-xs-12">
-                            <q-list bordered class="q-mr-sm q-mb-sm q-ml-sm">
-                              <q-item>
-                                <q-item-section>
-                                  <q-item-label caption lines="2"
-                                    >Date of Birth</q-item-label
-                                  >
-                                  <q-item-label>
-                                    {{
-                                      user.date_of_birth
-                                        | dateToHumanReadableForm
-                                    }}
-                                  </q-item-label>
-                                </q-item-section>
-                              </q-item>
-                            </q-list>
-                          </div>
-
-                          <div class="col-md-4 col-xs-12">
-                            <q-list bordered class="q-mr-sm q-mb-sm q-ml-sm">
-                              <q-item>
-                                <q-item-section>
-                                  <q-item-label caption lines="2"
-                                    >Created At</q-item-label
-                                  >
-                                  <q-item-label>
-                                    {{
-                                      user.created_at | dateToHumanReadableForm
-                                    }}
-                                  </q-item-label>
-                                </q-item-section>
-                              </q-item>
-                            </q-list>
-                          </div>
-
-                          <div class="col-md-4 col-xs-12">
-                            <q-list bordered class="q-mr-sm q-mb-sm q-ml-sm">
-                              <q-item>
-                                <q-item-section>
-                                  <q-item-label caption lines="2"
-                                    >Portfolio</q-item-label
-                                  >
-                                  <q-item-label>
-                                    <q-icon
-                                      color="teal"
-                                      name="fas fa-kiwi-bird"
-                                      class="icon-spacing"
-                                    >
-                                      <q-tooltip>
-                                        Poultry
-                                      </q-tooltip>
-                                    </q-icon>
-                                    <q-icon
-                                      color="teal"
-                                      name="fas fa-fish"
-                                      class="icon-spacing"
-                                    >
-                                      <q-tooltip>
-                                        Fishery
-                                      </q-tooltip>
-                                    </q-icon>
-                                    <q-icon
-                                      color="teal"
-                                      name="fas fa-water"
-                                      class="icon-spacing"
-                                    >
-                                      <q-tooltip>
-                                        Farmland
-                                      </q-tooltip>
-                                    </q-icon>
-                                    <q-icon
-                                      color="teal"
-                                      name="fas fa-pepper-hot"
-                                      class="icon-spacing"
-                                    >
-                                      <q-tooltip>
-                                        Cash Crop
-                                      </q-tooltip>
-                                    </q-icon>
-                                  </q-item-label>
-                                </q-item-section>
-                              </q-item>
-                            </q-list>
-                          </div>
-
-                          <div class="col-md-4 col-xs-12">
-                            <q-list bordered class="q-mr-sm q-mb-sm q-ml-sm">
-                              <q-item>
-                                <q-item-section>
-                                  <q-item-label caption lines="2"
-                                    >Settings</q-item-label
-                                  >
-                                  <q-item-label>
-                                    <q-icon
-                                      color="teal"
-                                      name="fas fa-lock"
-                                      class="icon-spacing"
-                                      @click="accessAccountConfirm(user)"
-                                    >
-                                      <q-tooltip>
-                                        Access
-                                      </q-tooltip>
-                                    </q-icon>
-                                    <q-icon
-                                      color="teal"
-                                      name="fas fa-key"
-                                      class="icon-spacing"
-                                      @click="triggerChangePassword(user)"
-                                    >
-                                      <q-tooltip>
-                                        Password
-                                      </q-tooltip>
-                                    </q-icon>
-                                    <q-icon
-                                      color="teal"
-                                      name="fas fa-edit"
-                                      class="icon-spacing"
-                                      @click="triggerUserEdit(user)"
-                                    >
-                                      <q-tooltip>
-                                        Edit
-                                      </q-tooltip>
-                                    </q-icon>
-
-
-
-
-                                  </q-item-label>
-                                </q-item-section>
-                              </q-item>
-                            </q-list>
-                          </div>
-
-                          <div class="col-md-2 col-xs-12">
-                            <q-list bordered class="q-mr-sm q-mb-sm q-ml-sm">
-                              <q-item>
-                                <q-item-section>
-                                  <q-item-label caption lines="2"
-                                    >Report</q-item-label
-                                  >
-                                  <q-item-label>
-                                    <q-icon
+                          <q-icon
                                       color="teal"
                                       name="fas fa-file"
                                       class="icon-spacing"
@@ -350,46 +153,9 @@
                                         Generate Report
                                       </q-tooltip>
                                     </q-icon>
-                                  </q-item-label>
-                                </q-item-section>
-                              </q-item>
-                            </q-list>
-                          </div>
-
-
-
-                          <div class="col-md-2 col-xs-12">
-                            <q-list bordered class="q-mr-sm q-mb-sm q-ml-sm">
-                              <q-item>
-                                <q-item-section>
-                                  <q-item-label caption lines="2"
-                                    >Trash</q-item-label
-                                  >
-                                  <q-item-label>
-                                    <q-icon
-                                      color="teal"
-                                      name="fas fa-trash-alt"
-                                      class="icon-spacing"
-                                       @click="triggerUserRemove(user)"
-                                    >
-                                      <q-tooltip>
-                                        Delete Account
-                                      </q-tooltip>
-                                    </q-icon>
-                                  </q-item-label>
-                                </q-item-section>
-                              </q-item>
-                            </q-list>
-                          </div>
-
-
-
                         </div>
-
-
-                        
-                      </q-card-section>
-                    </q-card>
+                      </q-item-section>
+                    </template>
                   </q-expansion-item>
                 </q-list>
 

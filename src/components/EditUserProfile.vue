@@ -1,13 +1,4 @@
 <template>
-  <div style="position: relative">
-           <!-- UserEdit Container Starts Here -->
-          <transition-group
-            appear
-            enter-active-class="animated fadeInDown slower"
-            leave-active-class="animated fadeOutUp slower"
-          >
-
-          
             <div
               class="userEditContainer shadow-1 "
              

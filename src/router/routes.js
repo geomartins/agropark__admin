@@ -12,6 +12,18 @@ const routes = [
   },
 
   {
+    path: '/food-park',
+    component: () => import('layouts/Legend.vue'),
+    children: [
+      { path: '', component: () => import('pages/foodpark/dashboard.vue') },
+
+      // { path: '/login', component: () => import('pages/Login.vue') },
+      // { path: '/password_reset', component: () => import('pages/PasswordReset.vue') },
+     
+    ]
+  },
+
+  {
     path: '/dashboard',
     component: () => import('layouts/Legend.vue'),
     children: [
